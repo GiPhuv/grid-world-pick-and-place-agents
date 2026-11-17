@@ -46,7 +46,7 @@ bars = plt.bar(
 plt.bar_label(bars)
 plt.yscale("log")
 plt.title("Comparing agents when running")
-plt.ylabel("Comparing average")
+plt.ylabel("Average number of steps")
 plt.xlabel("Agents")
 plt.savefig("comparing_agents.png")
 plt.show()
