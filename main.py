@@ -24,7 +24,7 @@ def evaluate(agent_class, n_runs, max_steps):
     else:
         return 0, None
 
-names =["Random", "Reflex", "Goal_based"]
+names =["Random", "Reflex", "Goal-based"]
 avg_steps = []
 success_rates = []
 agent_classes = [RandomAgent, SimpleReflexAgent, GoalBasedAgent]
