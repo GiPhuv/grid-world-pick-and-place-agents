@@ -24,29 +24,30 @@ def evaluate(agent_class, n_runs, max_steps):
     else:
         return 0, None
 
-names =["Random", "Reflex", "Goal-based"]
-avg_steps = []
-success_rates = []
-agent_classes = [RandomAgent, SimpleReflexAgent, GoalBasedAgent]
-for cl in agent_classes:
-    rate, avg = evaluate(cl, 100, 20000)
-    avg_steps.append(avg)
-    success_rates.append(rate)
-
-labels = []
-for i in range(0, 3):
-    name = names[i]
-    rate = success_rates[i]
-    value = f"{name} ({rate}%)"
-    labels.append(value)
-bars = plt.bar(
-    x = labels,
-    height = avg_steps,
-)
-plt.bar_label(bars)
-plt.yscale("log")
-plt.title("Comparing agents when running")
-plt.ylabel("Average number of steps")
-plt.xlabel("Agents")
-plt.savefig("comparing_agents.png")
-plt.show()
+if __name__ == "__main__":
+    names =["Random", "Reflex", "Goal-based"]
+    avg_steps = []
+    success_rates = []
+    agent_classes = [RandomAgent, SimpleReflexAgent, GoalBasedAgent]
+    for cl in agent_classes:
+        rate, avg = evaluate(cl, 100, 20000)
+        avg_steps.append(avg)
+        success_rates.append(rate)
+    
+    labels = []
+    for i in range(0, 3):
+        name = names[i]
+        rate = success_rates[i]
+        value = f"{name} ({rate}%)"
+        labels.append(value)
+    bars = plt.bar(
+        x = labels,
+        height = avg_steps,
+    )
+    plt.bar_label(bars)
+    plt.yscale("log")
+    plt.title("Comparing agents when running")
+    plt.ylabel("Average number of steps (successful runs only")
+    plt.xlabel("Agents")
+    plt.savefig("comparing_agents.png")
+    plt.show()
