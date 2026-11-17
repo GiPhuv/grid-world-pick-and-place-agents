@@ -13,19 +13,21 @@ A robot has to reach an object, pick it up, and then find its way to the goal ce
 
 ## How to run
 
-You need Python and the `matplotlib` library by:
-    pip install matplotlib
+You need Python and the `matplotlib` library:
 
-Then run the following command in the terminal, form the project folder: 
-    python main.py
+    `pip install matplotlib`
 
-The chart is saved as `comparing_agents.png`
+Then run the following command in the terminal, from the project folder: 
+
+    `python main.py`
+
+The chart is saved as `comparing_agents.png`.
 
 ## Results
 
 ![Comparison of the three agents](comparing_agents.png)
 
-Random agent needs the most steps, and the Goal-based agent needs the fewest. The Random agent takes about 550 times more steps than the Goal-based agent. This shows that the Goal-based agent benefits from knowing the whole map and planning its path in advance. Each agent was run 100 times and 'max_steps = 20000'.
+The Random agent needs the most steps, and the Goal-based agent needs the fewest. The Random agent takes about 660 times more steps than the Goal-based agent. This shows that the Goal-based agent benefits from knowing the whole map and planning its path in advance. Each agent was run 100 times and `max_steps = 20000`.
 
 ## Limitations
 
