@@ -2,11 +2,24 @@
 
 A robot has to reach an object, pick it up, and then find its way to the goal cell to finish. This project compares three agents on this task: Random Agent, Simple Reflex Agent and Goal-based Agent (using BFS).
 
+## Project structure 
+
+| File | Description |
+|---|---|
+| `environment.py` | The `Robot` and `Environment` classes: the grid, walls, object, goal, and the rules for each action |
+| `agents.py` | The three agents: `RandomAgent`, `SimpleReflexAgent`, and `GoalBasedAgent` |
+| `search.py` | Search functions: `neighbors`, `bfs_distance`, and `find_path` |
+| `main.py` | Runs the experiment, evaluates each agent, and draws the comparison chart |
+
 ## How to run
 
-You need Python and the `matplotlib` library by `pip install matplotlib`.
+You need Python and the `matplotlib` library by:
+    pip install matplotlib
 
-Then run **python gridworld-pickandplace.py** in the terminal to run.
+Then run the following command in the terminal, form the project folder: 
+    python main.py
+
+The chart is saved as `comparing_agents.png`
 
 ## Results
 
