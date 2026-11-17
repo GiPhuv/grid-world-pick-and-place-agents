@@ -5,6 +5,7 @@ A robot has to reach an object, pick it up, and then find its way to the goal ce
 ## How to run:
 
 You need Python and the 'matplotlib' library by **pip install matplotlib**
+
 Then run **python gridworld-pickandplace.py** in the terminal to run.
 
 ## Results:
