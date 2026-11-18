@@ -2,6 +2,12 @@
 
 A robot has to reach an object, pick it up, and then find its way to the goal cell to finish. This project compares three agents on this task: Random Agent, Simple Reflex Agent and Goal-based Agent (using BFS).
 
+## Demo
+
+![Demo of the Goal-based agent](demo.gif)
+
+The robot (blue) walks to the object (orange), picks it up (the robot turns red), and places it on the goal cell (green). Black cells are walls and the borders of the map.
+
 ## Project structure 
 
 | File | Description |
@@ -10,6 +16,7 @@ A robot has to reach an object, pick it up, and then find its way to the goal ce
 | `agents.py` | The three agents: `RandomAgent`, `SimpleReflexAgent`, and `GoalBasedAgent` |
 | `search.py` | Search functions: `neighbors`, `bfs_distance`, and `find_path` |
 | `main.py` | Runs the experiment, evaluates each agent, and draws the comparison chart |
+| `animate.py` | Records the frames of one episode, plays the animation, and saves it as `demo.gif` |
 
 ## How to run
 
@@ -21,7 +28,11 @@ Then run the following command in the terminal, from the project folder:
 
     `python main.py`
 
-The chart is saved as `comparing_agents.png`.
+To run the animation:
+
+    `python animate.py`
+
+Run both commands from the project folder.
 
 ## Results
 
@@ -37,4 +48,4 @@ The Random agent needs the most steps, and the Goal-based agent needs the fewest
 
 ## Future work
 
-I plan to add an animation and, if possible, try Q-learning.
+I plan to try Q-learning, where the agent learns by trial and error instead of using a map.
